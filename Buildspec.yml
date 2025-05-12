@@ -1,9 +1,4 @@
 version: 0.2
-jobDefinitionName: my-first-batch-job
-
-env:
-  variables:
-    APP_ENV: "production"
 
 phases:
   install:
