@@ -6,7 +6,7 @@ phases:
       - echo Installing apache2 on Linux...
       - apt-get update
       - apt-get install -y nginx
-  pre_build:
+  build:
     commands:
       - echo Build start on `Date`
       - cp index.html /var/www/html
