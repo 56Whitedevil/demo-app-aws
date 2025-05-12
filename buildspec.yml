@@ -5,11 +5,10 @@ phases:
     commands:
       - echo Installing apache2 on Linux...
       - apt-get update
-      - apt-get install -y apache2 
+      - apt-get install -y nginx
   pre_build:
     commands:
       - echo Build start on `Date`
-      - mv index.html index.old.html
       - cp index.html /var/www/html
   post_build:
     commands:
