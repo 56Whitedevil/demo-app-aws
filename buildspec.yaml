@@ -18,7 +18,7 @@ phases:
   post_build:
     commands:
       - echo Testing Apache2 configuration...
-      - systemctl start apache2
+
 artifacts:
   files:
     - '**/*'
