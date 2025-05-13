@@ -1,0 +1,25 @@
+version: 0.2
+jobDefinitionName: my-first-batch-job
+
+env:
+  variables:
+    APP_ENV: "production"
+
+phases:
+  install:
+    commands:
+      - echo Installing apache2 on Linux...
+      - apt-get update
+      - apt-get install -y apache2 
+  pre_build:
+    commands:
+      - echo Build start on `Date`
+      - mv index.html index.old.html
+      - cp index.html /var/www/html
+  post_build:
+    commands:
+      - echo Testing Apache2 configuration...
+
+artifacts:
+  files:
+    - '**/*'
